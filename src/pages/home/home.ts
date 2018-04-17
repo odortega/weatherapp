@@ -59,15 +59,15 @@ getWeather(){
   .subscribe(data => {
     console.log(data.json());
     this.weatherdata        = data.json();
-    this.timeZone           = this.weatherdata.timezone;
-    this.iconWeather        = this.weatherdata.currently.icon; 
-    this.city               = this.weatherdata.currently.city;
-    this.country            = this.weatherdata.currently.country; 
-    this.temperature        = this.weatherdata.currently.temperature; 
-    this.humidity           = this.weatherdata.currently.humidity*100; 
-    this.precipProbability  = this.weatherdata.currently.precipProbability * 100; 
-    this.summary            = this.weatherdata.currently.summary; 
-    console.log(this.weatherdata.currently.icon);
+    this.timeZone           = this.weatherdata['timezone'];
+    this.iconWeather        = this.weatherdata['currently'].icon; 
+    this.city               = this.weatherdata['currently'].city;
+    this.country            = this.weatherdata['currently'].country; 
+    this.temperature        = this.weatherdata['currently'].temperature; 
+    this.humidity           = this.weatherdata['currently'].humidity*100; 
+    this.precipProbability  = this.weatherdata['currently'].precipProbability * 100; 
+    this.summary            = this.weatherdata['currently'].summary; 
+    console.log(this.weatherdata['currently'].icon);
     /*if (this.weatherdata.length > 1) {
         console.log(this.weatherdata);
     }*/

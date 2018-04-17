@@ -88,15 +88,15 @@ var HomePage = /** @class */ (function () {
             .subscribe(function (data) {
             console.log(data.json());
             _this.weatherdata = data.json();
-            _this.timeZone = _this.weatherdata.timezone;
-            _this.iconWeather = _this.weatherdata.currently.icon;
-            _this.city = _this.weatherdata.currently.city;
-            _this.country = _this.weatherdata.currently.country;
-            _this.temperature = _this.weatherdata.currently.temperature;
-            _this.humidity = _this.weatherdata.currently.humidity * 100;
-            _this.precipProbability = _this.weatherdata.currently.precipProbability * 100;
-            _this.summary = _this.weatherdata.currently.summary;
-            console.log(_this.weatherdata.currently.icon);
+            _this.timeZone = _this.weatherdata['timezone'];
+            _this.iconWeather = _this.weatherdata['currently'].icon;
+            _this.city = _this.weatherdata['currently'].city;
+            _this.country = _this.weatherdata['currently'].country;
+            _this.temperature = _this.weatherdata['currently'].temperature;
+            _this.humidity = _this.weatherdata['currently'].humidity * 100;
+            _this.precipProbability = _this.weatherdata['currently'].precipProbability * 100;
+            _this.summary = _this.weatherdata['currently'].summary;
+            console.log(_this.weatherdata['currently'].icon);
             /*if (this.weatherdata.length > 1) {
                 console.log(this.weatherdata);
             }*/
@@ -105,7 +105,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/jonathan/ionic/weatherapp/weatherapp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page1" style="background-color:#418FDE;">\n  <button id="page1-button1" (click)="showWeather()"  ion-button icon-only color="positive" block style="border-radius:6px 6px 6px 6px;">\n    <ion-icon name="refresh"></ion-icon>\n  </button>\n  <div id="page1-container2">\n    <div id="page1-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        <ion-icon name="{{iconWeather}}"></ion-icon>{{timeZone}}\n      </p>\n    </div>\n  </div>\n  <div id="page1-container1">\n    <h1 id="page1-heading1" style="color:#FFFFFF;text-align:center;">\n    {{temperature}}°\n    </h1>\n  </div>\n  <div id="page1-container7">\n    <div id="page1-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        HUMIDITY RAIN\n      </p>\n    </div>\n  </div>\n  <div id="page1-container8">\n    <div id="page1-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        {{humidity}}% {{precipProbability}}%\n      </p>\n    </div>\n  </div>\n  <div id="page1-container9">\n    <div id="page1-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        {{summary}}\n      </p>\n    </div>\n  </div>\n  <p>lat: {{lat}}</p>\n  <p>lng: {{lng}}</p>\n\n</ion-content>\n'/*ion-inline-end:"/home/jonathan/ionic/weatherapp/weatherapp/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/jonathan/ionic/ionic3/weatherapp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page1" style="background-color:#418FDE;">\n  <button id="page1-button1" (click)="showWeather()"  ion-button icon-only color="positive" block style="border-radius:6px 6px 6px 6px;">\n    <ion-icon name="refresh"></ion-icon>\n  </button>\n  <div id="page1-container2">\n    <div id="page1-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        <ion-icon name="{{iconWeather}}"></ion-icon>{{timeZone}}\n      </p>\n    </div>\n  </div>\n  <div id="page1-container1">\n    <h1 id="page1-heading1" style="color:#FFFFFF;text-align:center;">\n    {{temperature}}°\n    </h1>\n  </div>\n  <div id="page1-container7">\n    <div id="page1-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        HUMIDITY RAIN\n      </p>\n    </div>\n  </div>\n  <div id="page1-container8">\n    <div id="page1-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        {{humidity}}% {{precipProbability}}%\n      </p>\n    </div>\n  </div>\n  <div id="page1-container9">\n    <div id="page1-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">\n      <p style="color:#FFFFFF;">\n        {{summary}}\n      </p>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/jonathan/ionic/ionic3/weatherapp/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _c || Object])
     ], HomePage);
@@ -232,7 +232,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/jonathan/ionic/weatherapp/weatherapp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/jonathan/ionic/weatherapp/weatherapp/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/jonathan/ionic/ionic3/weatherapp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/jonathan/ionic/ionic3/weatherapp/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
