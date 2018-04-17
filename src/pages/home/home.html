@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1" style="background-color:#418FDE;">
+  <button id="page1-button1" (click)="showWeather()"  ion-button icon-only color="positive" block style="border-radius:6px 6px 6px 6px;">
+    <ion-icon name="refresh"></ion-icon>
+  </button>
+  <div id="page1-container2">
+    <div id="page1-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF;">
+        <ion-icon name="{{iconWeather}}"></ion-icon>{{timeZone}}
+      </p>
+    </div>
+  </div>
+  <div id="page1-container1">
+    <h1 id="page1-heading1" style="color:#FFFFFF;text-align:center;">
+    {{temperature}}°
+    </h1>
+  </div>
+  <div id="page1-container7">
+    <div id="page1-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF;">
+        HUMIDITY RAIN
+      </p>
+    </div>
+  </div>
+  <div id="page1-container8">
+    <div id="page1-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF;">
+        {{humidity}}% {{precipProbability}}%
+      </p>
+    </div>
+  </div>
+  <div id="page1-container9">
+    <div id="page1-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF;">
+        {{summary}}
+      </p>
+    </div>
+  </div>
+  <p>lat: {{lat}}</p>
+  <p>lng: {{lng}}</p>
+
+</ion-content>
